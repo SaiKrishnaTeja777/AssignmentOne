@@ -1,0 +1,6 @@
+The percentage of Cpu usage: 
+24.1149%
+Memory Usage: 426/1460MB (29.18%)
+Disk Usage: 4/26GB (16%)
+CPU Load: 0.84
+Swap space info: Available :3G Used:0B
