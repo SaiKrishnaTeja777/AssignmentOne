@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  name: Installing Apache and Configuring it to a Website
+  tasks:
+    - name: Installing apache on the server
+      yum:
+        name: httpd
+        state: present
+    - name: Starting apache on the server
+      service:
+        name: httpd
+        state: started
+    # this will copy the file root/index.html to the apache root folder www/html
+    - copy:
+        src: /root/index.html        #change the source
+        dest: /var/www/html/index.html #change destination accordingly
+        owner: root
+        group: root
+        mode: 0644
