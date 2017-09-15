@@ -1,0 +1,18 @@
+[teja@pythonLearning AssignmentOne]$ ln -s /tmp/gat1 file1
+[teja@pythonLearning AssignmentOne]$ ln -s /tmp/gat2 file2
+[teja@pythonLearning AssignmentOne]$ ln -s /tmp/gat3 file3
+[teja@pythonLearning AssignmentOne]$ ln -s /tmp/gat4 file4
+
+#check if the files are links are not using ls -l
+
+[teja@pythonLearning AssignmentOne]$ ls -l /tmp/gat1 file1; ls -l /tmp/gat2 file2; ls -l /tmp/gat3 file3; ls -l /tmp/gat4 file4
+
+lrwxrwxrwx. 1 teja teja 9 Sep 12 23:58 file1 -> /tmp/gat1
+-rw-rw-r--. 1 teja teja 0 Sep 12 23:57 /tmp/gat1
+lrwxrwxrwx. 1 teja teja 9 Sep 12 23:58 file2 -> /tmp/gat2
+-rw-rw-r--. 1 teja teja 0 Sep 12 23:57 /tmp/gat2
+lrwxrwxrwx. 1 teja teja 9 Sep 12 23:58 file3 -> /tmp/gat3
+-rw-rw-r--. 1 teja teja 0 Sep 12 23:57 /tmp/gat3
+lrwxrwxrwx. 1 teja teja 9 Sep 12 23:58 file4 -> /tmp/gat4
+-rw-rw-r--. 1 teja teja 0 Sep 12 23:57 /tmp/gat4
+
