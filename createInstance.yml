@@ -1,0 +1,26 @@
+# This playbook is for creating a ec2 instanc from ansible
+# This playbook requires ssh configured to localhost, python
+# pip and boto installed on your machine
+
+--- 
+- 
+  hosts: localhost
+  connection: local
+  become: False
+  gather_facts: False
+  name: "Creating a Ec2 Instance"
+  tasks: 
+    - 
+      ec2: 
+        aws_access_key: AKIAIAGTTXGN5HSJ62HA  #change it to your account
+        aws_secret_key: n87UbdylaaDtI/FqslbpPpEkhyEHAkr/pwu4RX7i
+        count: 2
+        group: default
+        image: ami-c998b6b2
+        region: us-east-1
+        instance_tags: 
+          Name: MySQL
+        instance_type: t2.micro
+        key_name: krishnateja #change the keypair to you keypair
+        wait: true
+      name: "Ec2 instance is being created."
